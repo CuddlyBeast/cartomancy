@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cartomancy</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+<link rel="stylesheet" href="cartomancy.css">
+<script type='text/javascript' src="cartomancy.js"></script>
+  </head>
+<body>
+    <div class="overlay">
+        <div class="header">
+            <div id="header-text">
+                <h1>Cartomancy Divination</h1>
+                <h2>Come your future awaits.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="partner">
+            
+    </div>
+    <div class="main">
+        <h3>Enter At Your Own Peril</h3>
+      <p>Do you seek the guidance of the tarot cards, enter my child — It's hard to trace the origins of cartomancy, but it may date back as far as the 14th century. Step up to the wheel of fortune and confront your fate.<button type="button" id="interact">Meet Your Fate</button></p> 
+      <div class="value-props">
+            <div class="prop">
+                <img src="https://content.codecademy.com/programs/code-foundations-path/diamond.png" width="60px">
+                <h2 id="cardName1"></h2>
+                
+            </div>
+
+            <div class="prop">
+                <img src="https://content.codecademy.com/programs/code-foundations-path/diamond.png" width="60px">
+                <h2 id="cardName2"></h2>
+               
+            </div>
+
+            <div class="prop">
+                <img src="https://content.codecademy.com/programs/code-foundations-path/diamond.png" width="60px">
+                <h2 id="cardName3"></h2>
+            </div>
+            <div class="prop">
+        
+                <h2 id="finalMessage"></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+    const tarotDeck = {
+    "The Fool": "Let go of preconceived ideas and remain open to change.",
+    "The Magician": "Trust your inspiration. You are smarter than you think.",
+    "The High Priestess": "Put self-cultivation at the top of your daily priority list.",
+    "The Empress": "Rather than being tough on yourself for not measuring up, know that your positive influence has facilitated favorable outcomes.",
+    "The Emperor": "Draw upon the capable inner resources you possess to get the task completed.",
+    "The Hierophant": "Develop your expertise, and have faith that you are a master in the making.",
+    "The Lovers": "Creative compromise helps you accept your commitments fully.",
+    "The Chariot": "Look upon the movements of change as full of promise and adventure.",
+    "Strength": "Clearly distinguish between your ego and your intuitive self.",
+    "The Hermit": "Give yourself time for contemplation. Don't allow others to stand in your way.",
+    "Wheel of Fortune": "Fundamental change is imminent. The positive benefits you gain during this period could last a long time.",
+    "Justice": "You are seen as a fair-minded party whose opinion matters.",
+    "The Hanged Man": "Accept the consequences of your decisions. Go through it, get it over with, and free yourself up for new pursuits.",
+    "Death": "Free yourself from a past that no longer serves you well and proceed toward the future.",
+    "Temperance": "Identify and acquire the ingredients that will most help you complete your mission and leave the rest behind.",
+    "The Devil": "Let go of inhibitions. Allow yourself to express all of who you are.",
+    "The Tower": "You are the one to serve as a catalyst for change.",
+    "The Star": "Your time is better spent in reflection and spiritual pursuit.",
+    "The Moon": "Listen to the body and its unique wisdom. Rely upon your inner resources as your best source of support and security.",
+    "The Sun": "Let your light shine. Be confident in the sacred power of your original nature.",
+    "Judgement": "Let go of your past. The future welcomes you with a bounty of growth and change.",
+    "The World": "Be serene in knowing you are succeeding in your goal.",
+
+}
+    
+    document.getElementById("interact").addEventListener("click", function() {
+        console.log("button clicked!");
+        const tarotKeys = Object.keys(tarotDeck);
+        let index = Math.floor(Math.random() * tarotKeys.length);
+        let index2 = Math.floor(Math.random() * tarotKeys.length);
+        let index3 = Math.floor(Math.random() * tarotKeys.length);
+        if (index === index2 || index === index3){
+            index = Math.floor(Math.random() * tarotKeys.length)
+        }else if (index2 === index3){
+            index2 = Math.floor(Math.random() * tarotKeys.length)
+        }
+        const cardRandomizerName1 = `${tarotKeys[index]}: \n ${tarotDeck[tarotKeys[index]]}`;
+        const cardRandomizerName2 = `${tarotKeys[index2]}: \n ${tarotDeck[tarotKeys[index2]]}`;
+        const cardRandomizerName3 = `${tarotKeys[index3]}: \n ${tarotDeck[tarotKeys[index3]]}`;
+
+
+        document.getElementById("cardName1").innerHTML = cardRandomizerName1;
+        document.getElementById("cardName2").innerHTML = cardRandomizerName2;
+        document.getElementById("cardName3").innerHTML = cardRandomizerName3;
+
+        document.getElementById("finalMessage").innerHTML = finalMessage()
+    });
+    
+
+  </script>
+</body>
+</html>

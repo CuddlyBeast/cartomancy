@@ -1,0 +1,108 @@
+body{
+    background-color: #FFFFFF;
+    margin: 0px;
+    padding:0px;
+}
+.header{
+    background-image: url(https://images.unsplash.com/photo-1605523741183-8e5b71295edb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80);
+    background-position: center center;
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+}
+
+#header-text{
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 25%;
+    width: 60%;
+    z-index: 2 !important;
+    font-weight: bold;
+    text-decoration-color: black;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 70px;
+    font-weight: 550;
+    line-height: 60px;
+    margin: 20px;
+    
+}
+h2{
+    color: #ffffff;
+    font-family: 'Open Sans',sans-serif;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 100;
+}
+h3{
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 10px 0px;
+    text-align: center;
+}
+h4{
+    color: #cccccc;
+    font-family: 'Quicksand',sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+p{
+    color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 24px;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+}
+.partner{
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    border-bottom: 1px solid #eeeeee;
+    position: relative;
+    background-color: white;
+    z-index: 3;
+    background: url(https://images.unsplash.com/photo-1529480653440-0e5fd1af911c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80);
+    background-size: 50px ;
+}
+.partner img{
+    position: relative;
+    top: 6px;
+}
+
+.main{
+    background: url(https://content.codecademy.com/programs/code-foundations-path/shards.png);
+    margin: 0px;
+    padding: 40px;
+}
+
+#interact{
+    border: 1px solid #ffffff;
+    font-size: 17px;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.value-props{
+    margin: 40px auto;
+    width: 60%;
+}
+.prop{
+    border: 1px solid #ffffff;
+    padding: 40px 0px;
+    margin: 5px 0px;
+    text-align: center;
+}
+.prop h2{
+    font-family: 'Quicksand',sans-serif;
+    font-size: 24px;
+}
